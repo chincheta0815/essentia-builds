@@ -1,4 +1,4 @@
-set -exu
+set -e -x
 
 YASM_VERSION=yasm-1.3.0
 CMAKE_VERSION=cmake-2.8.12
