@@ -2,8 +2,6 @@ FROM quay.io/pypa/manylinux2014_aarch64:latest
 
 COPY build_scripts/build_tools.sh build_scripts/build_3rdparty_static.sh ./
 
-RUN echo $PATH
-
 RUN /build_tools.sh && rm -r /build_tools.sh
 
 ENV PATH /usr/lib/qt4/bin:/usr/local/cmake-2.8.12/bin:${PATH}
