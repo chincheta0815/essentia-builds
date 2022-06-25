@@ -11,6 +11,6 @@ ENV PREFIX /usr/local
 ENV PKG_CONFIG_PATH=${PREFIX}/lib/pkgconfig
 ENV ESSENTIA_3RDPARTY_VERSION v2.1_beta5-810-gafec9ed7
 
-RUN linux32 /build_3rdparty_static.sh && rm -r /build_3rdparty_static.sh
+RUN /build_3rdparty_static.sh && rm -r /build_3rdparty_static.sh
 
 CMD ["/bin/bash"]
