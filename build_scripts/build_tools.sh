@@ -3,6 +3,8 @@ set -e -x
 YASM_VERSION=yasm-1.3.0
 CMAKE_VERSION=cmake-2.8.12
 
+echo HERE
+
 # yasm on CentOS 5 is too old, install a newer version
 # manylinux2014(CentOS 7) has yasm-1.2.0 by default. Is it enough?
 curl -SLO http://www.tortall.net/projects/yasm/releases/$YASM_VERSION.tar.gz
