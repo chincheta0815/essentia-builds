@@ -1,5 +1,3 @@
-#! /bin/bash
-
 set -e -x
 
 YASM_VERSION=yasm-1.3.0
