@@ -1,7 +1,7 @@
 name : Build aarch64
 on:
   push:
-    branches: [ aarch64 ]
+    branches: [ "aarch64" ]
 
   workflow_dispatch:
 
