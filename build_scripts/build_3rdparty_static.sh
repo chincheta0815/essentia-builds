@@ -1,11 +1,13 @@
 set -e -x
 
 # Check out a particular commit for building dependencies
-curl -SLO https://github.com/MTG/essentia/archive/$ESSENTIA_3RDPARTY_VERSION.zip
+curl -SLO https://github.com/chincheta0815/essentia/archive/$ESSENTIA_3RDPARTY_VERSION.zip
 unzip $ESSENTIA_3RDPARTY_VERSION.zip
 cd essentia-*/
 
-sed -i '/--enable-sse2/d' ./packaging/build_config.sh
+for file in $(ls ./patches/*.patch); do
+    patch -p 0 $file
+done
 
 if [[ ${WITH_TENSORFLOW} ]] ; then
     with_tensorflow=--with-tensorflow
