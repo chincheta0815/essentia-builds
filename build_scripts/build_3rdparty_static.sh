@@ -5,7 +5,7 @@ curl -SLO https://github.com/chincheta0815/essentia/archive/$ESSENTIA_3RDPARTY_V
 unzip $ESSENTIA_3RDPARTY_VERSION.zip
 cd essentia-*/
 
-for file in $(ls ./patches/*.patch); do
+for file in $(ls ./patches_for_aarch64/*.patch); do
     patch -p 0 $file
 done
 
