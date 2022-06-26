@@ -6,7 +6,7 @@ unzip $ESSENTIA_3RDPARTY_VERSION.zip
 cd essentia-*/
 
 for file in $(ls ./patches_for_aarch64/*.patch); do
-    patch -p 0 $file
+    patch -p0 < $file
 done
 
 if [[ ${WITH_TENSORFLOW} ]] ; then
