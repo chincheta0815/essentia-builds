@@ -5,7 +5,8 @@ curl -SLO https://github.com/chincheta0815/essentia/archive/$ESSENTIA_3RDPARTY_V
 unzip $ESSENTIA_3RDPARTY_VERSION.zip
 cd essentia-*/
 
-for file in $(ls ./patches_for_aarch64/*.patch); do
+for idx in 1 2 3; do
+    file=$(ls ./patches_for_aarch64/0${idx}_*.patch)
     patch -p0 < $file
 done
 
